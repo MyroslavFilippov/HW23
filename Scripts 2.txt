@@ -1,0 +1,6 @@
+docker cp books5.csv postgres_db:/books5.csv
+
+COPY books(id, category_id, author, title, year)
+FROM '/books5.csv'
+DELIMITER ','
+CSV HEADER;
